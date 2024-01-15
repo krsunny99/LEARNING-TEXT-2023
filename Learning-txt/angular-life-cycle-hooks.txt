@@ -1,0 +1,59 @@
+
+
+jab v ang app ko broser mein open krte hh tab wo us partuclar component kae instatnce ko create karta hh phir open karta or band karne pae 
+destroy v karta hh open sae destroy kae bech mein jo process hh usi ko khuda nae angular life cycle hooks bolahh mere bhaii
+
+-- jab v koi comp. call hoti hh toh ushka instance bnate hh bhaii
+
+1.ngOnChanges
+
+       bar bar chalta hh jab v koi input value mein change hota hh
+
+2.ngOnInit
+       
+       pure lifecycle mein ek he baar chalta hh bhaii
+
+         constructor                                           -------------------                ngOninit
+        logic mat implement kro,bas variable initialize kro or service inject kro                ----perform logic,make API caalls 
+        -- agr koi input hh toh wo con. kae baad initialise hota hh
+
+        called after initialsing input property but before displaying on UI
+
+3.ngDoCheck
+
+ ----jab manually check karna hoh or jab object ka reference change nhi hota hh tab ngOnChange detect nhi kr pata hh tab ishko use mein lae shkte hh
+---- jab existing object kae ref. ko update karte hh change nhi karte hh tab ngOnChange nhi call hota hh 
+
+4&5 ngAfterContentInit and ngAfterContentInitChecked
+
+----read about ngcontent
+
+   --sabse pehle content projection kya hota hh jab hm child comp mein kuch dynamic HTML bhejte hh toh ushko child comp view mein ng-content hold karta hai
+   --- or usko child comp kae beech mei bhejte hh 
+    <app-child> <div class="row">
+            <div class="col-md-12">
+                <img src="assets/img/under_maintenance.png" alt="">
+                <h1>We'll Be Right Back</h1>
+            </div>
+     </app-child>
+
+abb jab content projection hua tab ngAfterContentInit  chalega or jab hoh jayega ya koi change hoga tab ngAfterContentInitChecked chalega yae ngAfterContentInitChecked 
+update pae bar-bar chalega thik hai
+
+6&7 ngAfterViewInit and ngAfterViewInitChecked
+
+--- with the help of viewChild we can get the refeence of a HTML element 
+---  view in angular will be initialised after the ngOninit called
+---   jab view initialise hota hh tab ngAfterViewInit  chalta hh or jab update hota hh toh bar bar ngAfterViewInitChecked calta hh 
+
+8 ngOnDestroy
+
+ --- jab v hm kisi comp. ko call karte hh tab browsermein angular  ushka ek instance create karta hh 
+ --- jab hm ek comp. saae doosre pae jate hh toh broswer mein angular us instance ko delete v karta hh
+ ---delte hone sae thik pehle ngOnDestroy call hota hah 
+
+ --- isme hm kisi observable ko unsubscribe kar shkte hh jo memory leaked sae bchata hh, ab koi timer hh jo chl reha hh toh wo toh chalta he rahega 
+     jab hm doosre comp. pae v chale jaye toh iss case mein ushko clear kar shkte hh ngOnDestroy mein 
+
+
+

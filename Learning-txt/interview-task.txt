@@ -1,0 +1,58 @@
+CLOSURE - DONE
+EVENT LOOP -DONE
+working of js - DONE
+ASYNC - DONE
+CALLBACK-DONE
+PROMISE-DONE
+JS SCOPE-
+LEXICAL SCOPE-DONE
+ARRAY func-
+STRING func-
+Object func-
+DOM manipulation-DONE
+
+
+
+Angular
+
+Life Cycle hooks ---DONE
+DI
+Rxjs ----- DONE
+Ngrx ---- IN PROGRESS
+---------------------
+service worker
+pwa
+ssr
+hydration
+pipes
+subject & types ---- DONE
+angular material 
+
+
+
+Node 
+video - one hours
+CRUD application with angular
+
+--------------------------------------
+CRUD - DONE
+BSIC NODE - DONE
+
+
+
+CODING QUESTIONS PRACTICE
+
+---count string char occurence
+---triplet
+---longest subsequence
+
+
+CSS
+
+University Website - DONE
+Netflix - DONE
+YouTube --- PROGRESS
+AIR BNB --- COMING SOON
+LINKEDIN 
+ADMIN PANEL
+

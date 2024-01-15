@@ -1,0 +1,61 @@
+DAY - 1 (23aug)
+
+#####1
+
+Data Structure - Managing data so that we can use it in better way.
+
+algorithm - process/way to manage that data.
+
+linear - in which operation can be performed at only start and  end.
+
+non-linear - in which operation can be performed at any where
+
+operations on datastructure
+       -Traversal
+       -insertion
+       -deletion
+       -searching
+       -sorting
+       -merging
+
+######2
+
+--array traversing with for-loop
+
+DAY-2(24aug)
+  
+space complexity - memory, no of varibales we have created, amount of space req. to resolve a program.
+
+time complexity - no lines to execute a program , not machine dependent
+
+DAY-3(25 aug)
+
+Big O notation - used to denote complexity.
+
+ASYMTOPIC NOTATION AND ANALYSIS
+
+fn = 5n**2 + 6n + 12
+
+asymtopic analysis tells which algo is best for this particular data
+
+***Array Sorting :
+  bubble sorting	
+
+DAY 4(29 aug)
+
+Recursion-1> Direct            2>Indirect
+
+simple recursion is called direct recursion
+
+indirect recursion example 
+
+function apple(){        <-------- >                      function bnanaa(){
+                                                              apple()
+   banana()                                                  }  bnana()
+}
+apple()
+
+
+
+completed till 12 videos.
+

@@ -1,0 +1,49 @@
+
+
++++++++++++++++++++++ micro frontend
+
+
+=> app
+
+1) Konverse   - 4300
+2) Insite Konverse  -4400
+3) Playground   - 4200
+4) features  = shared 
+
+
+
+
+=> Feature 
+	- Components
+		- loader 
+		- toaster
+		- servers
+
+=> Konverse 
+	- home 
+	- links -> inste  host - list page
+
+
+=> Playground
+	- home 
+	- links -> inste  host - list2 page
+
+
+=> insite 
+	- home
+	- list 
+	- list 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+

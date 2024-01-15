@@ -1,0 +1,8 @@
+++++++++++++++++++++ create workspace 
+                           --ng new monorepo create-application=false
+                     create project 
+                           -- ng g application playground --routing --style=css
+                           --ng g application insite --routing --style=css
+                     add module federation
+                           --ng add @angular-architects/module-federation@16.0.4  --project playground --port 4200 --type host
+                           --ng add @angular-architects/module-federation@16.0.4  --project insite --port 4400 --type remote

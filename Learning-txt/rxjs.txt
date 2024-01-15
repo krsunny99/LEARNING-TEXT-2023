@@ -1,0 +1,176 @@
+
+--- rxjs ek library hh jo hm observable provide karwata hh or sath he mein operators v yae ek alternative hh promises ka
+
+                  observables                                                                   promises
+     - can emit multiple values                                                                -- can't
+     - can have operators                                                                       --can't
+     -can be subcribal and cancelable,helpful in prevent memory leak                           --can't 
+     -lazy                                                                                      -- not lazy
+
+-----in rxjs an observale emits value and subscriber/observer in an object that we pass in subscribe()
+----- once the complete method call then vlaue after that will not be emitted
+
+-- tap doesnot modify the original value
+--- if errors occured observable stop emitting values
+----switchMap subcribe to only latedt subscriptions and previos subscription should be unsubscribed
+
+map,filter,tap,fromEvent,switchmap,ngOnDestroy,debounceTime
+
+-- observable --unicasting,cold
+---with the help of shareReply() we can convert unicasting to multicasting
+
+
+Resource@123
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+To program asynchronous strem fficiently
+
+observables - data source 
+                                --------------------------------------------------------------
+
+                                    item 1     item 2       item3
+
+                                ---------------------------------------------------------------
+
+box-observables
+item - stream
+
+promise can be async only but observable can be both sync as well as async
+
+FromEvent
+
+Interval=>
+   after given time emit some data
+
+Timer =>
+    timer(delay,interval)
+    timer(5000,1000)  after 5 seconds stars and show data after every one seconds
+
+of/from=>
+   
+   of convert argument to stream --> agr koi array pass karte hh toh array he return karegae
+   from convert an array/promise to stream
+
+toArray
+
+   collect all emission and convert it an array
+
+Custom Observable Ceation 
+   
+    we can create custom observable in rxjs with the help of Observable.create()
+     -- we can data to it with next()
+     -- show completion with complete()
+     -- show error with error()
+Map
+
+    -- map will transform an observable to new observable
+
+Pluck
+   -- we can recive the property of an object of stream
+   -- it useful in recieving the value from nested object
+
+tap
+    -- it perform actions without any side effect
+
+take
+
+      [1,2,3,4,5,6]
+      --take(4)-- take 4 value  -- 1,2,3,4
+      --takeLast(3) -- take the value from last  4,5,6
+      -- takeUntil(fromEvent(document,'click') -- takes an observable and takes value untill click
+
+retry,retrywhen,scan,delay
+
+     ---retry means we have called an API or hume data nhi mila abb aap automatic dobara call krwa shkte hh retry sae
+       retry(3)  means retry 3 bar karega API call 
+
+     --- retrywhen kae sath scan and delay use krte hh  retrywhen ka retry kab karna hh
+           scan ka matlab kitni baar call hua retry ushko count karta hh or delay means kitne time baad retry dobara call karna hh
+
+
+SUBJECT
+
+--- subject is a special type of observable in which at the same time we can emit and subscribe to data
+----  or jab data pass hoh gya hh ushke baad he data milega yae multicasting v hah.
+
+
+BehaviourSubject 
+
+--- hm isme starting mein value set kar shkte hh
+
+ReplaySubject 
+
+---- isme aap mention kar shkte hh last ka kitna value chahiye or time v lga shkte hoh or us time kae andar subcribe nhi kiya toh nhi milega 
+
+
+Async Subject
+
+---jab sime observable complete hoh jata hh tab last emitted value milta hh 
+
+
+Concat - Merge
+
+---- concat mein jab ek stream complete hogga tab doosra data aayega or map mein jab v data milega yae return karega data s
+
+CocatMap
+
+--- yae ek flatening operator hh agr hme kabi res mein v ek observable milta hh tab yae kaam aata hha 
+----  yae map + concatAll jaise kaam karta hh
+---- jab ek res mein hume observable milta hh toh use do bar subscribe karna hoga but is case mein ek baar he subscribe karenage hum.
+-----  yae ek res ka completely wait kart ahh complete hone ka 
+
+
+
+mergeMap
+
+--- yae ek flatening operator hh agr hme kabi res mein v ek observable milta hh tab yae kaam aata hha 
+----  yae map + mergeAll jaise kaam karta hh
+---- jab ek res mein hume observable milta hh toh use do bar subscribe karna hoga but is case mein ek baar he subscribe karenage hum.
+----- yae ek res ka completely wait nhi karta hh complete hone ka 
+
+
+switchMap
+
+---- is also a flatening operator and is works on cancelenation mode , it gives the last value out of all
+
+exhaustMap
+
+---- is not give another value or process anything untill it processed the first one 
+
+concatAll,mergeAll,switchAll,exhaustAll -- yae sab flatten karne kae kaam aate hh 
+
+concat,merge,switch,exhaust -- yae sab merge karne kae kaam aate hh 
+
+
+shareReply--
+
+agr hm api call kar reheh hh or next time hm 2 baar or API call kar rehe hh taki filtered result mile type mobile or type laptop kae liye 
+toh us case mein hm shareReply ka use kareneg or ek he baar API call hoga 
+
+
+
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
